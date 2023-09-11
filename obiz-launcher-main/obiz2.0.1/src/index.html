@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>obiz-launcher-2.0.1</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <script src="index.js"></script>
+    <script src="js/appFunctions.js"></script>
+    <script src="https://use.fontawesome.com/a3fe9be396.js"></script>
+  </head>
+  <body>
+    <div class="draggable-region"></div>
+    <div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Launch Page</a>
+        <a href="chat.html">Chat</a>
+        <a href="settings.html">Settings</a>
+        <a href="#" onclick="alert('Email: qyrhal@gmail.com')">Contact</a>
+        <a onclick="alert('Theme is decided on your system wide preference.\n\nSee later versions for custom themes')"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></a>
+      </div>
+    </div>
+    
+    <!-- Use any element to open the sidenav -->
+    <span onclick="openNav()" class="hamburger"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+    
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+      <div class="centered-div">
+        <div class="text-center">
+          <img class="logo" src="assets/images/ObizIcons/bglogo.png" style="height: 10vh; width: 10vh;">
+          <h1>Obiz Launcher</h1>
+          <h3>v2.0.1 | macos | universal</h3>
+          <div class="wrap">
+            <a href="https://qyrhal.github.io/chat/" target="_blank"><button class="button">Launch Chat</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

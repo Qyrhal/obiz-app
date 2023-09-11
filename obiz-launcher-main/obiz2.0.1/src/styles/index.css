@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Silkscreen&display=swap');
+:root {
+  font-family: 'Handjet', cursive;
+  font-family: 'Silkscreen', cursive;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #000;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  border-radius: 100%;
+  transform: scale(0.125) translateY(-250%) translateX(450%);
+  animation: anim 1s cubic-bezier(0,0,.3,1) 1;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  width: 100%;
+}
+
+@keyframes anim {
+  0% {
+    border-radius: 100%;
+    transform: scale(0.5) translateY(-450%) translateX(0%);
+  }
+  
+  30% {
+    transform: scale(0.5) translateY(calc(-350% + 100vh)) translateX(0%);
+  }
+  
+  60% {
+    transform: scale(0.5) translateY(-250%) translateX(0%);
+  }
+  
+  100% {
+    overflow: auto;
+    border-radius: 0%;
+    transform: scale(1) translateY(0%) translateX(0%);
+  }
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  z-index: 10000;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #f6f6f6;
+  pointer-events: none;
+  animation: anim2 1s cubic-bezier(0,0,.3,1) 1s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes anim2 {
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    opacity: 0;
+  }
+}
+
+img{user-select: none;}
+svg{fill:#17660A}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.draggable-region{
+  height: 3%;
+  background-color: #f6f6f6; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  -webkit-app-region: drag;
+}
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #f6f6f6; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  padding-top: 80px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #000;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  padding-top: 40px;
+}
+
+.hamburger{
+  position: absolute;
+  right: 1em;
+  padding-top: 2%;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-right .7s;
+  padding: 10px;
+  padding-top: 3%;
+}
+
+.centered-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh; /* Optional, for vertical centering in viewport */
+  background-color: #f6f6f6;
+  border-radius: 10%;
+}
+
+.centered-div-settings{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh; /* Optional, for vertical centering in viewport */
+  background-color: #f6f6f6;
+  border-radius: 5%;
+  margin-top: 5%;
+  position: relative;
+  border-color: #000;
+}
+
+.left-content {
+  float: left;
+  width: 30%; /* Adjust the width as needed */
+}
+
+.text-center{
+  text-align: center;
+  margin: 10px; /* Optional spacing between text elements */
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Handjet', cursive;
+  font-family: 'Silkscreen', cursive;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #f6f6f6;
+  background-color: #000;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  
+  cursor: pointer;
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button:hover {
+  background-color: #17660A;
+  box-shadow: 0px 15px 20px #7ed95796;
+  color: #f6f6f6;
+  transform: translateY(-7px);
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #000;
+  }
+
+  body::before {
+    background-color: #000;
+  }
+
+  svg{fill:#17660A}
+
+  .sidenav {
+    background-color: #000;
+  }
+
+  .sidenav a:hover {
+    color: #f6f6f6;
+  }
+
+  a:hover {
+    color: #17660A;
+  }
+
+  .draggable-region{
+    background-color: #000;
+  }
+
+  .centered-div{
+    background-color: #000;
+  }
+
+  .button{
+    color: #000;
+    background-color: #f6f6f6;
+  }
+  input,
+  button {
+    color: #f6f6f6;
+    background-color: #0f0f0f98;
+  }
+  button:active {
+    background-color: #0f0f0f69;
+  }
+  
+  .sidenav{
+    background-color: #000; 
+  }
+
+  .centered-div-settings{
+    background-color: #000;
+    border-color: #f6f6f6;
+    border: 10px;
+  }
+}
+
+/*
+.dark-mode{
+  :root {
+    color: #f6f6f6;
+    background-color: #000;
+  }
+  svg{fill:#f6f6f6}
+
+  a:hover {
+    color: #24c8db;
+  }
+
+  input,
+  button {
+    color: #f6f6f6;
+    background-color: #0f0f0f98;
+  }
+  button:active {
+    background-color: #0f0f0f69;
+  }
+  
+  .sidenav{
+    background-color: #000; 
+  }
+
+  .centered-div{
+    background-color: #111111;
+  }
+
+  .centered-div-settings{
+    background-color: #111111;
+  }
+}
+*/
+/* Button Cosmetics*/
