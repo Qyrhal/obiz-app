@@ -154,10 +154,10 @@ svg{fill:#17660A}
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30vh; /* Optional, for vertical centering in viewport */
+  height: 35vh; /* Optional, for vertical centering in viewport */
   background-color: #f6f6f6;
   border-radius: 5%;
-  margin-top: 5%;
+  margin-top: 20px;
   position: relative;
   border-color: #000;
 }
