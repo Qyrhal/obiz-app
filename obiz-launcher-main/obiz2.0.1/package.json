@@ -1,8 +1,8 @@
 {
-  "name": "obizv2",
-  "productName": "obiz",
+  "name": "Astralv2",
+  "productName": "Astral",
   "version": "2.0.1",
-  "description": "Obiz Electron version 2",
+  "description": "Astral Electron version 2",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -33,8 +33,8 @@
     "electron-builder": "^24.6.4"
   },
   "build": {
-    "productName": "obiz",
-    "appId": "com.obiz.app",
+    "productName": "Astral",
+    "appId": "com.Astral.app",
     "directories": {
       "output": "dist"
     },
@@ -47,7 +47,7 @@
           ]
         }
       ],
-      "icon": "src/assets/images/Obizicons/icon.icns",
+      "icon": "src/assets/images/Astralicons/icon.icns",
       "darkModeSupport": true
     }
   }
